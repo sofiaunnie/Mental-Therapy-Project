@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONS - Get Started 3</title>
+</head>
+<style>
+    body{
+        background-color: rgb(230, 222, 222);
+    }
+    #getstarted3-div1{
+        margin-top: 10%;
+        text-align: center;
+        font-family: Verdana;
+        font-size: 30px;
+        display: block;
+    }
+    #button{
+    height: 43px;
+    width: 140px;
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: bold;
+    background-color: whitesmoke;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-left: 10px;
+    margin-top: 30px; 
+    }
+</style>
+<body>
+    <div id="getstarted3-div1">
+        <p>Feeling well connected to other people promotes positive mental health,<br> 
+            physical health and gives life meaning.</p>
+            <p style="font-size: 20px;">How connected do you feel with the people around you?</p>
+        <div style="display: inline-flex;">
+        <select id="connection" style="font-size: 30px; height: 50px; margin-top: 24px; border-radius: 10px;">
+            <option value="1">(Select One)</option>
+            <option value="2">Very Connected</option>
+            <option value="3">Fairly Connected</option>
+            <option value="4">Somewhat Connected</option>
+            <option value="5">Distant</option>
+            <option value="6">Not Connected</option>
+        </select>
+        <button id="button" onclick="location.href='Get started4.html'">Next</button>
+        </div>
+    </div>
+    <script>
+            let button = document.getElementById("button").disabled = true;
+            let connect = document.getElementById("connection");
+
+            
+            connect.onchange = function(){
+                if(connect.value != "1"){
+                    let button = document.getElementById("button").disabled = false;
+                }
+                else{
+                    let button = document.getElementById("button").disabled = true;
+                }
+            }
+    </script>
+</body>
+</html>

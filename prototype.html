@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+
+.Navbar{
+    width: 100%;
+    float: center;
+    height: auto;
+    background-size: 100%;
+    padding: .5rem 70px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-align: center;
+    border: 40px solid #2ec486;
+    border-top: 0px;
+    margin: 0px;
+}
+body{
+    background-color: #011627;
+    color: #fdfffc;
+    text-align: center; 
+}
+.Navbar a{
+    color: whitesmoke;
+    text-align: center;
+    padding: 25px;
+    font-size: 16px;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+.nav_link{
+    color: #15e4d0;
+}
+.logo{
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    height: 110px;
+    width: 100px;
+}
+a {
+    color: #222222;
+    text-decoration: none;
+    outline: none !important;
+}
+#login{
+    position: absolute;
+    left: 1050px;
+    top: 17px;
+    height: 35px;
+    width: 100px;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: whitesmoke;
+    cursor: pointer;
+    border-radius: 15px;
+}
+button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 0;
+    font-weight: normal;
+    position: relative;
+    font-weight: normal;
+    line-height: normal;
+    color: whitesmoke;
+    
+}
+.section{
+    width: 45%;
+    height: 100%;
+    background: rgb(68, 58, 46);
+    float: left;
+    margin-right: 150px;
+}
+.section_2{
+    width: 45%;
+    height: 100%;
+    background: rgb(68, 58, 46);
+    float: right;
+    margin-left: 100px;
+}
+.section_3{
+    width: 30%;
+    height: 100%;
+    background: rgb(68, 58, 46);
+    float: right;
+    margin-left: 100px;
+}
+
+.about_box {
+    width: 100%;
+    float: left;
+    background-color: #f1fafb;
+    height: auto;
+    padding: 30px;
+}
+
+.book_text {
+    width: 100%;
+    float: left;
+    font-size: 30px;
+    color: #252525;
+    text-align: center;
+    font-weight: 500;
+}
+
+.Email_text {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #bebebe;
+    background-color: #ffffff;
+    padding: 5px 15px;
+    border: 0px;
+    margin-top: 30px;
+}
+
+.massage-bt {
+    width: 100%;
+    float: left;
+    color: #bebebe;
+    height: 110px;
+    font-size: 18px;
+    padding: 36px 20px 10px 20px;
+    background-color: #ffffff;
+    border: 0px;
+    margin-top: 30px;
+}
+
+.send_bt {
+    width: 140px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.send_bt a {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #1becde;
+    padding: 7px 0px;
+    text-align: center;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+
+.send_bt a:hover {
+    background-color: #252525;
+}
+.footer_logo {
+    width: 80%;
+    float: left;
+    padding: 0px 0px 30px 0px;
+}
+
+.address_text {
+    width: 100%;
+    float: right;
+    font-size: 24px;
+    color: #ffffff;
+    padding-bottom: 30px;
+}
+
+.map_icon {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #d6d6d6;
+    padding-bottom: 10px;
+}
+
+.paddlin_left_0 {
+    padding-left: 5px;
+}
+.Enter_text {
+    width: 100%;
+    float: right;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: transparent;
+    padding: 7px 10px;
+    margin-top: 10px;
+    border: 1px solid #cfcfd0;
+}
+
+input.Enter_text::placeholder {
+    color: #fff;
+}
+
+.subscribe_bt {
+    width: 170px;
+    float: left;
+    margin-top: 20px;
+}
+
+.subscribe_bt a {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #19e9d9;
+    text-align: center;
+    padding: 7px 0px;
+    text-transform: uppercase;
+}
+
+.social_icon {
+    width: 100%;
+    float: right;
+}
+
+.social_icon ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.social_icon li {
+    float: left;
+    padding-right: 10px;
+    padding-top: 20px;
+}
+.copyright_section {
+    width: 100%;
+    float: left;
+    background-color: #2ec486;
+    height: auto;
+}
+
+.copyright_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    margin-left: 0px;
+    color:black;
+    text-align: center;
+}
+
+.copyright_text a {
+    color: black;
+}
+
+.copyright_text a:hover {
+    color: black;
+}
+
+
+</style>
+</head>
+<body>
+    <!--Header section start-->
+    <div class = "Navbar">
+    <div class = "logo"><a href="Mental Therapy.html"><img src="images/logo-removebg-preview.png"></a></div>
+           <a class = "nav_link" href="Mental Therapy.html">Home</a>
+           <a class = "nav_link" href="Services.html">Services</a>
+           <a class = "nav_link" href="About us.html">About us</a>
+           <a class = "nav_link" href="Contact us.html">Contacts</a>
+           <button id="login">LOGIN</button>
+    </div>
+    <!--Header section end-->  
+    <div class = "section">
+        <div class = "row">
+            <div class = "container">
+                <div class = "col-sm-6">
+                        <h2 style = "font-family:cursive"> From young to seasoned.</br>
+                            We help adults understand what is happening inside</br>
+                            themselves for a more fulfilling existence.</h2>
+                            <p></p>
+                        <h6> We believe in your capacity to grow because we are </br>
+                            lucky enough to see our clients do it everyday</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "section_2">
+            <div class = "container">
+                <div class = "col-sm-6">
+                    <h1 style = "font-family: Georgia, 'Times New Roman', Times, serif; color: rgb(0, 0, 0);">What It's like to work with us</h1>
+                    <p></p>
+                    <h6>Therapy can sometimes feel like having a good converstaion with a close</br> and trusted
+                         friend who want to hear all about the problem you are facing</br> 
+                    <p></p>
+                    However, it ideally touches something more profound. For change to truly happen. it must.</br>
+                    <p></p>
+                    We will focus on what you feel right now to give us clues to inderstand you better.how you cope. and what you nee to heal and grow.</br>
+                    <p></p>
+                    You will know We are fully engaged with you at every moment, not only listening to your feelings but feeling with you aong the way.</br>
+                    <h4>Therapy often works best with weekly or bi-weekly meetings 
+                        to foster trust and </br>increase results through consistency and dedication to the work</h4>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class = "section_3">
+        <div class = "row">
+            <div class = "container">
+                <div class = "col-sm-6">
+                    <h2 style = "font-family: Georgia, 'Times New Roman', 'Times New Roman', Times, serif ; color:black">Our Approach</h2>
+                    <p></p>
+                    <h5 style = "font-family:'Lucida Sans';">Like many modern therapists, We use a combination of approaches
+                        to suit my clients unique needs. Our background is in
+                        psychodynamic pyschotherapy and a treatment called
+                        Accelerated Experiment Dynamic pyschotherapy(AEDP). You
+                        might not be familiar with this treatment. So let us tell you about it.
+                    <p></p>
+                        While many therapeutic approaches have roots in looking at what
+                        is not working or 'wrong' AEDP pulls for your strengths and your
+                        natural ability to heal.
+                    <p></p>
+                        <ul>
+                        <li>It focuses us in-the-moment during each session. We will look
+                        for cues from your body to help you express an emotion that may
+                         have been stuck for a while.</li>
+                         <p></p>
+                        <li>Looking at what is going on with you right now allows us to
+                             bring out inner abiities to heal.</li>
+                             <p></p>
+                        <li>A focus on connection and attachment facilities the repair of old
+                            pattrns and ways of relating that may not be working anymore.
+                        </li>
+                    </ul></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="col-md-6">
+    <div class="about_box">
+       <h1 class="book_text">Book Appoinment</h1>
+       <input type="text" class="Email_text" placeholder="FirstName" name="Name">
+       <input type="text" class="Email_text" placeholder="LastName" name="Name">
+       <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="Message"></textarea>
+       <div class="send_bt"><a href="#">SEND</a></div>
+    </div>
+ </div>
+ 
+
+
+   
+            
+                
+
+
+     
+
+
+     <!-- footer section start -->
+     <footer>
+     <div class="copyright_section">
+        <div class="container">
+           <div class="row">
+              <div class="col-lg-3 col-sm-6">
+                 <div class="footer_logo"><a href="Mental Therapy.html"><img src="images/logo-removebg-preview.png"></a></div>
+                 <h1 class="address_text">Contact Us</h1>
+                 <div class="map_icon"><img src="images/map-icon.png"><span class="paddlin_left_0">Location</span></div>
+                 <div class="map_icon"><img src="images/call-icon.png"><span class="paddlin_left_0">+2347033928281</span></div>
+                 <div class="map_icon"><img src="images/mail-icon.png"><span class="paddlin_left_0">ONS@gmail.com</span></div>
+              </div>
+
+              <div class="col-lg-3 col-sm-6">
+                 <h1 class="address_text">Newsletter</h1>
+                 <input type="text" class="Enter_text" placeholder="Enter your Email" name="Enter your Email">
+                 <div class="subscribe_bt"><a href="#">Subscribe</a></div>
+                 </div>
+
+                <div class="col-lg-3 col-sm-6"> 
+                    <h1 class = "address_text">Follow us</h1>
+
+                 <div class="social_icon">
+                    <ul>
+                       <li><a href="#"><img src="images/fb-icon.png"></a></li>
+                       <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                       <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+                       <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                    </ul>
+                    </div>
+                 </div>
+              </div> 
+     <!-- copyright section start -->
+    <div class="copyright_section"></div>
+       <p class="copyright_text">Terms & conditions. Privacy Contact</br>
+        © 2022 ONS Mental Health, Inc. All rights reserved.</p>
+    </div>
+</div>
+</div>
+</div>
+</footer>
+ <!-- copyright section end -->
+     <!-- footer section end -->
+     <!-- Javascript files-->
+</body>
+</html>

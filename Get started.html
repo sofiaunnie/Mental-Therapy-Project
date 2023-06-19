@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Mental Therapy.css">
+    <title>ONS - Get Started</title>
+</head>
+<style>
+    body{
+        background-color: rgb(230, 222, 222);
+    }
+    #getstarted-div1{
+        margin-top: 10%;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 25px;
+    }
+    #continue{
+    height: 43px;
+    width: 200px;
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: bold;
+    background-color: whitesmoke;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-top: 20px; 
+    }
+
+</style>
+<body>
+    <div id="getstarted-div1">
+        <div id="myslide">
+        <h3>Welcome to your mind spa</h3>
+        <p>"Happiness can be found even in the darkest of times,<br>
+            if one only remembers to turn on the light." — Albus Dumbledore</p>
+        <button id="continue" onclick="location.href='Get started1.html'" type="button">Continue </button>
+        </div>
+    </div>
+
+    <script>
+        let continuebtn = document.getElementById("continue");
+        continuebtn.onmouseover = function(){
+        continuebtn.style.backgroundColor = "rgb(230, 222, 222)";
+        continuebtn.style.color = "white";
+        }
+        continuebtn.onmouseout = function(){
+        continuebtn.style.backgroundColor = "white";
+        continuebtn.style.color = "black";
+        }
+        
+    </script>
+</body>
+</html>

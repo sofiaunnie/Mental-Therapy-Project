@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONS - Get Started 7</title>
+</head>
+<style>
+    body{
+        background-color: rgb(230, 222, 222);
+    }
+    table,th, td{
+            border: 1px solid #af9d74;
+            border-collapse: collapse;
+    }
+
+    th, td{
+        font-family: Verdana;
+        padding: 5px;
+        text-align: center;
+        color: black;
+    }
+    #div1{
+        text-align: center;
+        margin-top: 60px;
+    }
+    #div2{
+        display: inline-block;
+        width: 100%;
+        margin-top: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 25px;
+        text-align: center;
+    }
+    #button{
+    height: 43px;
+    width: 190px;
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: bold;
+    background-color: whitesmoke;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-left: 10px;
+    margin-top: 30px; 
+    }
+</style>
+<body>
+    <div id="div1">
+    <h3 style="color: black; font-size: 20px;">Please confirm your details below.</h3>
+    <center>
+    <table width="50%">
+        <tr>
+            <th colspan="2">Patient Details</th>
+        </tr>
+        <tr>
+        <th>Patient ID: </th><td id="patientID"></td>
+        </tr>
+        <tr>
+        <th>Patient Name: </th><td id="patientName"></td>
+        </tr>
+        <tr>
+        <th>Mental Health issues: </th><td id="mentalIssues"></td>
+        </tr>
+        <tr>
+        <th>Contact Number: </th><td id="phoneNumber"></td>
+        </tr>
+        <tr>
+        <th>Your Therapist</th><td id="therapist"></td>
+        </tr>
+        <tr>
+        <th>Session Date</th><td>07-09-2022 </td>
+        </tr>
+        <tr>
+        <th>Session Time</th><td>10:00 AM</td>
+        </tr>
+    </table>
+    </center>
+    </div>
+    <div id="div2">
+        <p>What type of live session would your Prefer?</p>
+        In Person Session<input type="radio" name="session" checked/> Online Session<input type="radio" name="session"><br>
+    <button id="button" onclick="location.href='Get started8.html'">Confirm Session</button>
+    </div>
+    <script>
+        let firstname = sessionStorage.getItem("name");
+        let lastname = sessionStorage.getItem("surname");
+        let symptoms = sessionStorage.getItem("symptoms");
+        let phones = sessionStorage.getItem("phonenum");
+
+        let randdomID = Math.floor(Math.random() * 400);
+
+        document.getElementById("patientName").innerHTML = firstname +" "+ lastname;
+        document.getElementById("mentalIssues").innerHTML = symptoms;
+        document.getElementById("phoneNumber").innerHTML = phones;
+        document.getElementById("patientID").innerHTML = "0100" + randdomID;
+
+        if(symptoms == "Anxiety" || symptoms == "Bipolar Disorder" || symptoms == "Child Mental Health"
+        || symptoms == "Compulsive Gambling" || symptoms == "Depression"){
+            document.getElementById("therapist").innerHTML = "Dr Nelson Onyeama";
+        }else if(symptoms == "Eating Disorders" || symptoms == "Mood Disorders" || symptoms == "Obsessive-Compulsive Disorder"
+        || symptoms == "Panic Disorder" || symptoms == "Personality Disorders"){
+            document.getElementById("therapist").innerHTML = "Dr Sophy";
+        }else if(symptoms == "Phobias" || symptoms == "Post-Traumatic Stress Disorder" || symptoms == "Psychotic Disorders"
+        || symptoms == "Schizophrenia"){
+            document.getElementById("therapist").innerHTML = "Dr Onas";
+        }else if(symptoms == "Self-Harm" || symptoms == "Suicide" || symptoms == "Teen Mental Health"
+        || symptoms == "Not Sure" || symptoms == "Others"){
+            document.getElementById("therapist").innerHTML = "Dr Micheal";
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONS - Get Started 4</title>
+</head>
+<style>
+    body{
+        background-color: rgb(230, 222, 222);
+    }
+    #getstarted4-div1{
+        margin-top: 10%;
+        text-align: center;
+        font-family: Verdana;
+        font-size: 30px;
+        display: block;
+    }
+    #button{
+    height: 43px;
+    width: 140px;
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: bold;
+    background-color: whitesmoke;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-left: 10px;
+    margin-top: 30px; 
+    }
+</style>
+<body>
+    <div id="getstarted4-div1">
+        <p>"Mental health problems don't define who you are. They are something you experience. 
+            You walk in the rain and you feel the rain, but you are not the rain." — Matt Haig</p>
+            <p style="font-size: 20px;">What Mental Health issues are you currently dealing with?</p>
+        <div style="display: inline-flex;">
+        <select id="symptoms" style="font-size: 30px; height: 50px; margin-top: 24px; border-radius: 10px;">
+            <option value="1">(Select One)</option>
+            <option>Anxiety</option>
+            <option>Bipolar Disorder</option>
+            <option>Child Mental Health</option>
+            <option>Compulsive Gambling</option>
+            <option>Depression</option>
+            <option>Eating Disorders</option>
+            <option>Mood Disorders</option>
+            <option>Obsessive-Compulsive Disorder</option>
+            <option>Panic Disorder</option>
+            <option>Personality Disorders</option>
+            <option>Phobias</option>
+            <option>Post-Traumatic Stress Disorder</option>
+            <option>Psychotic Disorders</option>
+            <option>Schizophrenia</option>
+            <option>Self-Harm</option>
+            <option>Suicide</option>
+            <option>Teen Mental Health</option>
+            <option>Not Sure</option>
+            <option>Other</option>
+        </select>
+        <button id="button" onclick="location.href='Get started5.html'">Next</button>
+        </div>
+    </div>
+    <script>
+        let button = document.getElementById("button").disabled = true;
+        let symptoms = document.getElementById("symptoms");
+        console.log(symptoms.value);
+
+        symptoms.onchange = function(){
+            sessionStorage.setItem("symptoms", symptoms.value);
+            if(symptoms.value != "1"){
+                let button = document.getElementById("button").disabled = false;
+            }
+            else{
+                let button = document.getElementById("button").disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>

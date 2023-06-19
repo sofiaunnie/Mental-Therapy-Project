@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MY THERAPHIST DOCTOR</title>
+    <link rel="stylesheet" href="STYLE.CSS">
+</head>
+
+<body>
+    <div class="full-page">
+        <div class="navbar"></div>
+        <a href='project.html'> MY THERAPHIST DOCTOR</a>
+        <nav>
+            <ul id="navbar">
+                <li><a href='#'>Home</a></li>
+                <li><a href='#'>About us</a></li>
+                <li><a href='#'>Services</a></li>
+                <li><a href='#'>Contact Us</a></li>
+                </a></button>
+                <li><button class='Loginbutton' onclick="document.getElementById('Login-form')
+                        .style.display='block'" style="width:auto;">Login</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div id='Login-form' class='Login-page'>
+        <div class="form-box">
+            <span onclick="document.getElementById('Login-form').style.display='none'"
+            class="close" title="Close Modal">&times;</span>
+            <div class='button-box'>
+                <div id='btn'></div>
+                <button type='button' onclick='Login()' class='toggle-btn'>Log-in</button>
+                <button type='button' onclick='Register()' class='toggle-btn'>Register</button>
+            </div>
+            <form id='Login' class='input-group-login'>
+                <input type='text' class='input-field' placeholder='Email Id' required>
+                <input type='password' class='input-field' placeholder='Enter password' required>
+                <input type='checkbox' class='checkbox'><span>Remember password</span>
+                <button type='submit' class='submit-btn'>Log in</button>
+            </form>
+            <form id='Register' class='input-group-register'>
+                <input type='text' class='input-field' placeholder='First Name' required>
+                <input type='text' class='input-field' placeholder='Last Name' required>
+                <input type='email' class='input-field' placeholder='Email Id' required>
+                <input type='password' class='input-field' placeholder='Enter password' required>
+                <input type='pasword' class='input-field' placeholder='Confirm Password' required>
+                <input type='checkbox' class='checkbox'><span>I agree to the terms and conditions</span>
+                <button type='submit' class='submit-btn'>Register</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById('Login');
+        var y = document.getElementById('Register');
+        var z = document.getElementById('btn');
+        function Register() {
+            x.style.left = '-400px';
+            y.style.left = '50px';
+            z.style.left = '110px';
+        }
+        function Login() {
+            x.style.left = '50px';
+            y.style.left = '450px';
+            z.style.left = '0px';
+        }
+    </script>
+    <script>
+        var modal = document.getElementById('Login-form');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none"
+            }
+        }
+    </script>
+</body>
+
+</html>

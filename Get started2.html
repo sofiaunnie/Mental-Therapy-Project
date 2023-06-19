@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONS - Get Started 2</title>
+</head>
+    <style>
+    body{
+        background-color: rgb(230, 222, 222);
+    }
+    #getstarted2-div1{
+        margin-top: 10%;
+        text-align: center;
+        font-family: Verdana;
+        font-size: 30px;
+        display: block;
+    }
+    #getstarted2-div2{
+        height: 250px;
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #upperdiv{
+        height: 120px;
+        width: 95.5%;
+        display: inline-flex;
+        padding-left: 25px;
+        padding-top: 15px;
+    }
+    #smiley1{
+        background-color: white;
+        height: 100px;
+        width: 100px;
+        margin-left: 20px;
+        border-radius: 20px;
+    }
+    #emoji{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        padding-top: 10px;
+        object-fit: cover;
+    }
+    a:hover{
+        padding: 5px;
+    }
+    </style>
+<body>
+    <div id="getstarted2-div1"><p id="newName"></p>
+    <p style="font-size: 25px;">Believe it or not, checking in with yourself is one of<br> 
+        the first steps to mindfulness—an important aspect of mental health.</p>
+    <p style="font-size: 20px;">Overall, how would you describe your mood?</p>
+    </div>
+    <div id="getstarted2-div2">
+        <div id="upperdiv">
+            <a href="Get started3.html"><div id="smiley1"><img id="emoji" src="images/Excited.png"/></div></a>
+            <a href="Get started3.html"><div id="smiley1"><img id="emoji" style="width: 75px; padding-left: 12px;" src="images/worried.png"/></div></a>
+            <a href="Get started3.html"><div id="smiley1"><img id="emoji" src="images/tired.png"/></div></a>
+            <a href="Get started3.html"><div id="smiley1"><img id="emoji" style="width: 73px; padding-left: 12px;" src="images/stressed.png"/></div></a>
+        </div>
+        <div id="upperdiv">
+            <a href="Get started3.html"><div id="smiley1"><img id="emoji" style="width: 85px; padding-left: 10px;" src="images/sad.png"/></div></a>
+            <a href="Get started3.html"><div id="smiley1"><img id="emoji" style="width: 75px; padding-left: 12px;" src="images/angry.png"/></div></a>
+            <a href="Get started3.html"><div id="smiley1"><img id="emoji" style="width: 75px; padding-left: 12px;" src="images/confused.png"/></div></a>
+            <a href="Get started3.html"><div id="smiley1"><img id="emoji" src="images/indifferent.png"/></div></a>
+        </div>
+    </div>
+    <script>
+        let myName = sessionStorage.getItem("name");
+        document.getElementById("newName").innerHTML = "Welcome " + myName;
+        
+    </script>
+</body>
+</html>

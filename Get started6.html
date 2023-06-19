@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONS - Get Started 6</title>
+</head>
+<style>
+    body{
+        background-color: rgb(230, 222, 222);
+    }
+    #getstarted6-div1{
+        height: 500px;
+        width: 800px;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        /* background-color: aquamarine; */   
+    }
+    #shape{
+        height: 350px;
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-left: -20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        box-shadow: 12px 0 15px -4px rgba(0, 0, 0, 0.8)
+    }
+    form{
+        padding-top: 40px;
+    }
+    input{
+        font-size: 17px;
+        border-radius: 5px;
+    }
+    td{
+        padding-top: 7px;
+        font-size: 17px;
+    }
+    button{
+    height: 30px;
+    width: 100px;
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: bold;
+    background-color: whitesmoke;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-left: 10px;
+    margin-top: 30px;
+    align-items: center;
+    }
+</style>
+<body>
+    <div id="getstarted6-div1">
+        <div id="thanks" style="display:inline-flex;">
+           <img style="width: 200px;" src="images/thanks man.png">
+           <div id="shape"><p style="font-size: 28px; padding-top: 20px;">Thank you for taking the assesment test!</p>
+            <p style="font-size: 20px;">By evaluating your condition based on the answers you provide in the assesment- 
+            we'll be able to craft an action plan to help you back to a happier and healthier self.</p>
+            <p>Please fill the details below where appropriate for record purposes.</p>
+            </div>
+        </div>
+        <div>
+            <form action="Get started7.html" method="get">
+                <fieldset style="width: 900px; font-family: Verdana; width: 90%; margin: auto; border-radius: 25px;">
+                    <center>
+                    <div>
+                    <h3>ONS REGISTRATION FORM</h3>
+                    </div>
+                    </center>
+                    <table style="margin: auto; padding-top: 20px;">
+                        <div>
+                            <tr>
+                            <td>First Name: </td><td><input id="fname" type="text" name="fname" required>*</td>
+                            </tr>
+                        </div>
+                        <div>
+                            <tr>
+                            <td>Middle Name: </td><td><input type="text" name="mname"></td>
+                            </tr>
+                        </div>
+                            <tr>
+                            <td>Last Name: </td><td><input id="lname" type="text" name="lname" required>*</td>
+                            </tr>
+                        <div>
+                            <tr>
+                            <td>E-Mail Address: </td><td><input type="email" name="email" required>*
+                            </td>
+                            </tr>
+                        </div>
+                        <div>
+                            <tr>
+                            <td>Password: </td><td><input id="password" type="password" name="pass1" required>*</td>
+                            </tr>
+                        </div>
+                        <div>
+                            <tr>
+                                <td>Confirm Password: </td><td><input id="password2" type="password" name="pass2">*</td>
+                            </tr>
+                        </div>
+                        
+                        <div>
+                            <tr>
+                            <td>Date Of Birth: </td><td><input type="date" name="dob" required>*
+                            </td>
+                            </tr>
+                        </div>
+                        <div>
+                            <tr>
+                            <td>Home - Address: </td><td><textarea name="address" rows="5" cols="18" maxlength="50" required></textarea>*
+                            </td>
+                            </tr>
+                        </div>
+                        <div>
+                            <tr>
+                            <td>Gender: </td>
+                            <td>Male <input type="radio" name="gender">
+                                Female <input type="radio" name="gender">
+                                Other <input type="radio" name="gender" checked>
+                            </td>
+                            </tr>
+                        </div>
+                        <div>
+                            <tr>
+                            <td>Phone Number: </td><td><input id="phone" type="text" name="phone" maxlength="11" required>*
+                            </td>
+                            </tr>
+                        </div>
+                        <div>
+                            <tr>
+                            <td>Marital Status: </td>
+                            <td>Married<input type="radio" name="marital">
+                                Single<input type="radio" name="marital" checked>
+                                Divorced<input type="radio" name="marital">
+                                Seperated<input type="radio" name="marital">
+                            </td>
+                            </tr>
+                        </div>
+                        <div>
+                            <tr>
+                            <td>Briefly describe reasons<br>for seeking help: </td><td><textarea name="describe" rows="10" cols="30" maxlength="250"></textarea>
+                            </td>
+                            </tr>
+                        </div>
+                    </table>
+                    <center>
+                    <div style="margin-left: auto; margin-right: auto;">
+                    <div><input type="checkbox" required>I agree to terms and condition *</div>
+                    <div>
+                        <button value="submit">Submit</button>
+                    </div>
+                    </div>
+                    </center>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <script>
+        let password = document.getElementById("password");
+        password.oninput = function(){
+            document.getElementById("password2").value = password.value;
+        }
+
+        let firstName = document.getElementById("fname");
+
+        firstName.onchange = function(){
+            sessionStorage.setItem("name", firstName.value);
+            console.log(firstName.value);
+        }
+        let surName = document.getElementById("lname");
+
+        surName.onchange = function(){
+            sessionStorage.setItem("surname", surName.value);
+            console.log(surName.value);
+        }
+        let phoneNumber = document.getElementById("phone");
+        phoneNumber.onchange = function(){
+            sessionStorage.setItem("phonenum", phoneNumber.value);
+        }
+
+    </script>
+</body>
+</html>

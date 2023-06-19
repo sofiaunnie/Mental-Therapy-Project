@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONS - Get Started 1</title>
+</head>
+<style>
+    body{
+        background-color: rgb(230, 222, 222);
+    }
+    #getstarted1-div1{
+        margin-top: 10%;
+        text-align: center;
+        font-family: Verdana;
+        font-size: 30px;
+        display: block;
+    }
+    #nametag{
+        width: 200px;
+        height: 35px;
+        font-family: Verdana;
+        font-size: 30px;
+        margin-left: 5px;
+    }
+    #button{
+    height: 43px;
+    width: 140px;
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: bold;
+    background-color: whitesmoke;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-top: 30px; 
+    margin-left: 20px;
+    }
+</style>
+<body>
+    <div id="getstarted1-div1">
+    <h3>Next, let's get acquainted—tell us your name.</h3>
+    <div style="display: inline-flex;">
+    <p>My name is<input id="nametag" type="text"></p><button id="button">Next</button>
+    </div>
+    </div>
+    <script>
+        let name = document.getElementById("nametag");
+        let button = document.getElementById("button").disabled = true;
+        name.oninput = function(){
+            if(name.value != ""){
+                let button = document.getElementById("button").disabled = false;
+            }
+            else{
+                let button = document.getElementById("button").disabled = true;
+            }
+        }
+        let myButton = document.getElementById("button");
+        myButton.onclick = function(){
+            myButton.style
+            sessionStorage.setItem("name", name.value);
+            location.href="Get started2.html";
+        }
+    </script>
+</body>
+</html>
